@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Xml;
+
 using log4net;
 using log4net.Config;
 using log4net.Core;
@@ -12,9 +13,7 @@ if (true)
     var appFolder = Path.GetDirectoryName(appPath);
     if (appFolder is null)
     {
-        throw new InvalidOperationException(
-            $"Can't determine app folder for {appPath}"
-        );
+        throw new InvalidOperationException($"Can't determine app folder for {appPath}");
     }
 
     var configFile = Path.Combine(appFolder, "log4net.config");
