@@ -146,23 +146,14 @@ namespace log4net.Appender
 #endif
 			public sealed class LockStateException : LogException
 			{
-				public LockStateException(string message)
-					: base(message)
-				{
-				}
+				public LockStateException(string message) : base(message) { }
 
-				public LockStateException()
-				{
-				}
+				public LockStateException() { }
 
-				public LockStateException(string message, Exception innerException) : base(message, innerException)
-				{
-				}
+				public LockStateException(string message, Exception innerException) : base(message, innerException) { }
 
 #if !NETCR && !NETSTANDARD1_3
-				private LockStateException(SerializationInfo info, StreamingContext context) : base(info, context) 
-				{
-				}
+				private LockStateException(SerializationInfo info, StreamingContext context) : base(info, context) { }
 #endif
 			}
 
