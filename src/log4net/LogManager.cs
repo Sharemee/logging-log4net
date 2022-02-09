@@ -65,9 +65,7 @@ namespace log4net
 		/// <remarks>
 		/// Uses a private access modifier to prevent instantiation of this class.
 		/// </remarks>
-		private LogManager()
-		{
-		}
+		private LogManager() { }
 
 		#endregion Private Instance Constructors
 

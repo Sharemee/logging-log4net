@@ -69,8 +69,6 @@ namespace log4net
 	/// <author>Nicko Cadell</author>
 	public sealed class ThreadContext
 	{
-		#region Private Instance Constructors
-
 		/// <summary>
 		/// Private Constructor. 
 		/// </summary>
@@ -79,13 +77,7 @@ namespace log4net
 		/// Uses a private access modifier to prevent instantiation of this class.
 		/// </para>
 		/// </remarks>
-		private ThreadContext()
-		{
-		}
-
-		#endregion Private Instance Constructors
-
-		#region Public Static Properties
+		private ThreadContext() { }
 
 		/// <summary>
 		/// The thread properties map
@@ -120,10 +112,6 @@ namespace log4net
 			get { return s_stacks; }
 		}
 
-		#endregion Public Static Properties
-
-		#region Private Static Fields
-
 		/// <summary>
 		/// The thread context properties instance
 		/// </summary>
@@ -133,7 +121,5 @@ namespace log4net
 		/// The thread context stacks instance
 		/// </summary>
 		private static readonly ThreadContextStacks s_stacks = new ThreadContextStacks(s_properties);
-
-		#endregion Private Static Fields
 	}
 }

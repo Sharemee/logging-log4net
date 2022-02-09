@@ -51,26 +51,18 @@ namespace log4net
 	/// <author>Nicko Cadell</author>
 	public sealed class GlobalContext
 	{
-		#region Private Instance Constructors
-
 		/// <summary>
 		/// Private Constructor. 
 		/// </summary>
 		/// <remarks>
 		/// Uses a private access modifier to prevent instantiation of this class.
 		/// </remarks>
-		private GlobalContext()
-		{
-		}
-
-		#endregion Private Instance Constructors
+		private GlobalContext() { }
 
 		static GlobalContext()
 		{
 			Properties[log4net.Core.LoggingEvent.HostNameProperty] = SystemInfo.HostName;
 		}
-
-		#region Public Static Properties
 
 		/// <summary>
 		/// The global properties map.
@@ -88,15 +80,9 @@ namespace log4net
 			get { return s_properties; }
 		}
 
-		#endregion Public Static Properties
-
-		#region Private Static Fields
-
 		/// <summary>
 		/// The global context properties instance
 		/// </summary>
 		private static readonly GlobalContextProperties s_properties = new GlobalContextProperties();
-
-		#endregion Private Static Fields
 	}
 }

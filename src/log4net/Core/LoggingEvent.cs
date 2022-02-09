@@ -95,8 +95,7 @@ namespace log4net.Core
         /// Prefer using the <see cref="TimeStampUtc"/> setter, since local time can be ambiguous.
         /// </para>
         /// </remarks>
-        [Obsolete(
-            "Prefer using TimeStampUtc, since local time can be ambiguous in time zones with daylight savings time.")]
+        [Obsolete("Prefer using TimeStampUtc, since local time can be ambiguous in time zones with daylight savings time.")]
         public DateTime TimeStamp;
 
         /// <summary>
